@@ -1,0 +1,967 @@
+<!DOCTYPE html><html xml:lang="en" lang="en" xmlns="http://www.w3c.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>OHXREF_I</title>
+    <meta name="title" content="NHANES 2015-2016: Oral Health - Recommendation of Care  Data Documentation, Codebook, and Frequencies" />
+    <style type="text/css">
+					.nhanes-doc { font: 75% Verdana, Arial, Helvetica, sans-serif; }
+
+					.nhanes-doc h1 {
+					color: #0c5205;
+					font-family: "Trebuchet MS", Arial, sans-serif;
+					font-size: 2em;
+					font-weight: normal;
+					margin-bottom: 10px;
+					margin-top: 0;
+					}
+
+					.nhanes-doc h2 {
+					color: #0c5205;
+					font-family: "Trebuchet MS", Arial, sans-serif;
+					font-size: 1.6em;
+					font-weight: normal;
+					}
+
+					.nhanes-doc h3 {
+					color: #000;
+					font-family: "Trebuchet MS", Arial, sans-serif;
+					font-size: 1.5em;
+					font-weight: normal;
+					}
+
+					.nhanes-doc h3.vartitle {
+					background-color: #c1d5b0;
+					padding: 6px 12px;
+					}
+
+					.nhanes-doc h4 {
+					color: #000;
+					font-family: "Trebuchet MS", Arial, sans-serif;
+					font-size: 1.3em;
+					font-weight: bold;
+					}
+
+					.nhanes-doc h5 {
+					color: #000;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 1em;
+					font-weight: bold;
+					}
+
+					.nhanes-doc h5.specialnote {
+					color: #000;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 1.2em;
+					font-style: italic;
+					font-weight: bold;
+					}
+
+					.nhanes-doc a {
+					color: #039;
+					text-decoration: none;
+					}
+
+					.nhanes-doc p {
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 1em;
+					line-height: 1.33em;
+					margin: 0 3em 1em;
+					padding: 0;
+					text-align: left;
+					}
+
+					.nhanes-doc ul {
+					list-style-type: disc;
+					margin: 0 3em 1em;
+					padding: 0;
+					}
+
+					.nhanes-doc ol {
+					list-style-type: decimal;
+					margin: 0;
+					overflow: hidden;
+					padding: 0;
+					padding-left: 2em;
+					}
+
+					.nhanes-doc li {
+					margin-left: 1.5em;
+					margin-top: 0.7em;
+					}
+
+					.nhanes-doc table {
+					border: #000 1px solid;
+					border-collapse: collapse;
+					margin: 0 auto 1em;
+					max-width: 600px;
+					padding: 2px;
+					page-break-inside: avoid;
+					table-layout: auto;
+					}
+
+					.nhanes-doc th {
+					background: #f4f4e1;
+					border: #000 1px solid;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					padding: 5px;
+					text-align: center;
+					vertical-align: top;
+					}
+
+					.nhanes-doc th.rowheader {
+					background: #f4f4e1;
+					border: #000 1px solid;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					padding: 5px;
+					text-align: center;
+					vertical-align: top;
+					}
+
+					.nhanes-doc td {
+					border: #000 1px solid;
+					font-family: Verdana, Arial, Helvetica, sans-serif;
+					padding: 5px;
+					text-align: left;
+					vertical-align: top;
+					}
+
+					.nhanes-doc td.values2 {
+					text-align: RIGHT;
+					vertical-align: top;
+					}
+
+					.nhanes-doc table caption {
+					font-weight: bold;
+					padding-bottom: 0.5em;
+					}
+
+					.nhanes-doc div#wrapper { width: 650px; }
+
+					.nhanes-doc div#toc {
+					border: solid 1px #CCC;
+					float: left;
+					height: 95%;
+					left: 750px;
+					overflow: hidden;
+					position: fixed;
+					top: 10px;
+					width: 400px;
+					z-index: 10;
+					}
+
+					.nhanes-doc div#toc h3 {
+					background-color: #f4f4e1;
+					border-bottom: solid 1px #ccc;
+					letter-spacing: 8px;
+					margin: 0;
+					padding: 8px;
+					text-align: center;
+					text-transform: uppercase;
+					}
+
+					.nhanes-doc div#toc-scroll {
+					height: calc(100% - 1.5em);
+					overflow: scroll;
+					width: 100%;
+					}
+
+					.nhanes-doc div#toc li {
+					margin-left: -0.5em;
+					margin-right: -0.5em;
+					}
+
+					.nhanes-doc div#PageHeader {
+					border-bottom: thin solid #999;
+					margin-bottom: 12px;
+					width: 650px;
+					}
+
+					.nhanes-doc div#Sections { width: 650px; }
+
+					.nhanes-doc div#Codebook { width: 650px; }
+
+					.nhanes-doc div#Codebook dl {
+					margin: 2em 0 10px 40px;
+					padding: 0;
+					width: 600px;
+					display: table;
+					}
+
+					.nhanes-doc div#Codebook dt {
+					float: left;
+					font-weight: bold;
+					margin: 0;
+					padding: 0.5em;
+					width: 150px;
+					display: table-cell;
+					}
+
+					.nhanes-doc div#Codebook dd {
+					float: left;
+					margin: 0;
+					padding: 0.5em;
+					width: 420px;
+					display: table-cell;
+					}
+
+					.nhanes-doc div#References {
+					page-break-after: always;
+					width: 650px;
+					}
+
+					.nhanes-doc div#Appendix {
+					page-break-after: always;
+					width: 650px;
+					}
+
+					.nhanes-doc table.values {
+					border: 2px;
+					left: 20px;
+					margin-bottom: 20px;
+					page-break-inside: avoid;
+					position: relative;
+					width: 600px;
+					}
+
+					.nhanes-doc span.file-size { color: gray; }
+
+					.nhanes-doc .pagebreak {
+					background-color: transparent;
+					display: block;
+					page-break-after: always;
+					page-break-inside: avoid;
+					}
+				</style>
+    <style type="text/css" media="print">
+					.nhanes-doc div#toc { display: none; }
+				</style>
+  </head>
+  <body class="nhanes-doc">
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <div id="toc-scroll">
+        <ul>
+          <li>
+            <a href="#Component_Description">Component Description</a>
+          </li>
+          <li>
+            <a href="#Eligible_Sample">Eligible Sample</a>
+          </li>
+          <li>
+            <a href="#Protocol_and_Procedure">Protocol and Procedure</a>
+          </li>
+          <li>
+            <a href="#Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</a>
+          </li>
+          <li>
+            <a href="#Data_Processing_and_Editing">Data Processing and Editing</a>
+          </li>
+          <li>
+            <a href="#Analytic_Notes">Analytic Notes</a>
+          </li>
+          <li>
+            <a href="#Codebook">Codebook</a>
+            <ul id="CodebookLinks">
+              <li>
+                <a href="#SEQN">SEQN - Respondent sequence number</a>
+              </li>
+              <li>
+                <a href="#OHDEXSTS">OHDEXSTS - Overall Oral Health Exam Status</a>
+              </li>
+              <li>
+                <a href="#OHDRCSTS">OHDRCSTS - Recommendation Care Status Code</a>
+              </li>
+              <li>
+                <a href="#OHAREC">OHAREC - Overall recommendation for care</a>
+              </li>
+              <li>
+                <a href="#OHAROCDT">OHAROCDT - Decayed teeth</a>
+              </li>
+              <li>
+                <a href="#OHAROCGP">OHAROCGP - Gum disease/problem</a>
+              </li>
+              <li>
+                <a href="#OHAROCOH">OHAROCOH - Oral hygiene</a>
+              </li>
+              <li>
+                <a href="#OHAROCCI">OHAROCCI - Impression of soft tissue condition</a>
+              </li>
+              <li>
+                <a href="#OHAROCDE">OHAROCDE - Denture/Partial Denture/Plates</a>
+              </li>
+              <li>
+                <a href="#OHARNF">OHARNF - No significant findings</a>
+              </li>
+              <li>
+                <a href="#OHAROTH">OHAROTH - Some other finding (specify w/referral)</a>
+              </li>
+              <li>
+                <a href="#OHAPOS">OHAPOS - Was participant exam position recumbent</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="PageHeader">
+        <h1>National Health and Nutrition Examination Survey</h1>
+        <h2>2015-2016 Data Documentation, Codebook, and Frequencies</h2>
+        <h3>Oral Health - Recommendation of Care  (OHXREF_I)</h3>
+        <h4> Data File: OHXREF_I.xpt</h4>
+        <h5 class="left">First Published: April 2018</h5>
+        <h5 class="right">Last Revised: NA</h5>
+      </div>
+      <div id="Sections">
+        <h2 id="Component_Description">Component Description</h2><p>NHANES is critical for monitoring oral health status, risk indicators for disease, and access to preventive and treatment services. This component will address public health significance in areas of surveillance, prevention, treatment, dental care utilization, health policy, evaluation of Federal health programs, standardization of new methods, and oral health disparities. </p>
+<p>Oral health data from NHANES will be used for: </p>
+<ul>
+    <li>Assessing the prevalence of major oral health diseases and conditions, including dental caries and periodontal disease; </li>
+    <li>Assessing prevention and treatment efforts, including the prevalence of dental sealants; </li>
+    <li>Evaluating specific public health programs/new policies and initiatives;  </li>
+    <li>Monitoring the oral health status of minority/underserved populations; </li>
+    <li>Evaluating <strong><em> Healthy People 2020</em> </strong> objectives related to oral health; and </li>
+    <li>Supporting research activities as identified in the 2000 Surgeon General&rsquo;s Report on <strong><em>  Oral Health in the United States.  </em></strong> </li>
+</ul>
+<p>The oral health examination (variable name prefix OHX) section provides information on a number of oral health topics. These topic areas and related target population groups in the OHX section include: </p>
+<ul>
+    <li>Tooth count (1 yr and older); </li>
+    <li>Dental caries (1 yr and older); </li>
+    <li>Root caries (18 yr and older); </li>
+    <li>Dental sealants (3 to 19 yrs); and</li>
+    <li>Recommendations for dental care (1 yr and older). </li>
+</ul><h2 id="Eligible_Sample">Eligible Sample</h2><p>All survey participants 1 year and older were eligible.</p><h2 id="Protocol_and_Procedure">Protocol and Procedure</h2><p>All examiners for 2015-16 oral health examination were dentists (D.D.S./D.M.D.) licensed in at least one state in the U.S. In 2015-16, the tooth count and dental sealants assessments followed the same protocols conducted in 1999-2004, 2011-2012, and 2013-2014. </p>
+<p>For all survey participants, the 2015-16 dental caries assessment was based on the Decayed, Missing, and Filled Surface (DMFS) Index. The Decayed and Missing Surfaces assessments were similar to the protocols conducted in 1999-2004, 2011-2012, and 2013-2014. The Filled Surface assessment included new scoring guidelines that the dental examiners used to assess filled tooth surfaces by restoration type. Please refer to Sections 4.3.3 and 4.3.6 in the <a href=" https://wwwn.cdc.gov/nchs/data/nhanes/2015-2016/manuals/2016_Oral_Health_Examiners_Procedures_Manual.pdf"> NHANES Oral Health Examiners Manual </a> for more details on the Filled Surface assessment.</p>
+<p>For survey participants aged 18 years and older, the 2015-16 dental caries assessment also included a dental root caries assessment. For teeth with recession, the dental examiners conducted a &ldquo;whole mouth&rdquo; assessment for untreated root caries and dental root restorations. Please refer to Chapter 5 in the <a href=" https://wwwn.cdc.gov/nchs/data/nhanes/2015-2016/manuals/2016_Oral_Health_Examiners_Procedures_Manual.pdf"> NHANES Oral Health Examiners Manual </a> for more details on the dental root caries assessment.</p><h2 id="Quality_Assurance_&amp;_Quality_Control">Quality Assurance &amp; Quality Control</h2><p>All NHANES dental examiners completed a comprehensive training and calibration period followed by periodic monitoring and recalibration. During the training session, dental examiners received instruction from the survey reference examiner that included lecture presentations, demonstration examinations, and standardization sessions where the reference examiner and examiner evaluated the same volunteers. Discussions were held between the examiners in training and the reference examiner after each examination round to minimize differences in the application of criteria and coding. Followed the training, calibration sessions were held to have dental examiners conduct independent replicate examinations, and the data were analyzed to assess consistency between each examiner and the reference examiner.  During the data collection period, the reference examiner visited each team up to three times per year to observe field operations and to replicate 20 to 25 oral health examinations during each visit. The purpose of these &ldquo;expert replications&rdquo; is to determine if the dentists are maintaining the examination standards achieved during training and to measure the degree of deviation, if any, from those standards. If the inter-rater correlation is not within acceptable limits, retraining is conducted on site and future monitoring of the field examiner intensified. An annual retraining session for each dental examiner also is conducted by the reference examiner to reinforce existing protocols and to accommodate protocol updates as needed. </p>
+<p>
+Automated data collection procedures for the survey were introduced in NHANES 1999. In the mobile examination centers (MECs), data for the OHX are recorded directly onto a computerized data collection form. The system is integrated centrally and it allows for ongoing monitoring of much of the data. As part of an on-going quality control practice, all data are reviewed systematically for logical inconsistencies and examiner error. Internal quality control data review indicates that data quality is acceptable.</p><h2 id="Data_Processing_and_Editing">Data Processing and Editing</h2><p>Frequency counts were checked, "skip" patterns were verified, and the reasonableness of responses to the questions was reviewed.</p><h2 id="Analytic_Notes">Analytic Notes</h2><p>The oral health data is released in two separate data files as follows:  </p>
+<ul>
+    <li>Dentition Exam (OHXDEN_I): Tooth count, dental caries, and dental sealants. </li>
+    <li>Referral (OHXREF_I): Report of findings-dental care recommendations, and miscellaneous. </li>
+</ul>
+<p>Oral health data from these two files can be linked using the unique survey participant identifier, SEQN. In addition to the oral health examination data, oral health questionnaire data can be found in the oral health questionnaire (variable name prefix OHQ) section of the NHANES 2015&ndash;2016 Household questionnaire. These data may be linked using the unique survey participant identifier, SEQN. Although these data were collected as part of the household questionnaire, if they are merged with the MEC exam data, exam sample weights should be used for the analyses.&nbsp;Please refer to the <a href="https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx"> NHANES Analytic Guidelines </a> and the online <a href="http://www.cdc.gov/nchs/tutorials/">NHANES Tutorial </a> for further details on the use of sample weights and other analytic issues.  </p>
+<p>
+If data from this release is combined with oral
+health data from previous data cycles, analysts should understand that
+methodological differences (in data collection) may exist among similar,
+earlier assessments and this may bias the analysis conducted. </p>
+<p>
+In 2015-2016, a dental fluorosis assessment was
+also conducted for participants aged 12-29 years as part of the NHANES oral
+health exam. The dental fluorosis assessment data are still being evaluated and
+are not included in this data file. </p></div>
+      <div id="Codebook">
+        <h2>Codebook and Frequencies</h2>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="SEQN">SEQN - Respondent sequence number</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">SEQN</dd>
+            <dt>SAS Label: </dt>
+            <dd>Respondent sequence number</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Respondent sequence number.</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHDEXSTS">OHDEXSTS - Overall Oral Health Exam Status</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHDEXSTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Overall Oral Health Exam Status</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Overall Oral Health Exam Status</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete</td>
+                <td class="values" align="right">8857</td>
+                <td class="values" align="right">8857</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">8859</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not Done</td>
+                <td class="values" align="right">306</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHDRCSTS">OHDRCSTS - Recommendation Care Status Code</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHDRCSTS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Recommendation Care Status Code</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Recommendation Care Status Code</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Complete</td>
+                <td class="values" align="right">8858</td>
+                <td class="values" align="right">8858</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">Partial</td>
+                <td class="values" align="right">1</td>
+                <td class="values" align="right">8859</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">Not Done</td>
+                <td class="values" align="right">306</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">0</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAREC">OHAREC - Overall recommendation for care</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAREC</dd>
+            <dt>SAS Label: </dt>
+            <dd>Overall recommendation for care</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Overall recommendation for care</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">See a dentist immediately</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">2</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">See a dentist within the next 2 weeks</td>
+                <td class="values" align="right">467</td>
+                <td class="values" align="right">469</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">3</td>
+                <td class="values">See a dentist at your earliest convenience</td>
+                <td class="values" align="right">1983</td>
+                <td class="values" align="right">2452</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">4</td>
+                <td class="values">Continue your regular routine care</td>
+                <td class="values" align="right">6406</td>
+                <td class="values" align="right">8858</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">307</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROCDT">OHAROCDT - Decayed teeth</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROCDT</dd>
+            <dt>SAS Label: </dt>
+            <dd>Decayed teeth</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Decayed teeth</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">2204</td>
+                <td class="values" align="right">2204</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">7</td>
+                <td class="values" align="right">2211</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">6954</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROCGP">OHAROCGP - Gum disease/problem</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROCGP</dd>
+            <dt>SAS Label: </dt>
+            <dd>Gum disease/problem</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Gum disease/problem</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">261</td>
+                <td class="values" align="right">261</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">6</td>
+                <td class="values" align="right">267</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8898</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROCOH">OHAROCOH - Oral hygiene</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROCOH</dd>
+            <dt>SAS Label: </dt>
+            <dd>Oral hygiene</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Oral hygiene</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">420</td>
+                <td class="values" align="right">420</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">3</td>
+                <td class="values" align="right">423</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">8742</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROCCI">OHAROCCI - Impression of soft tissue condition</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROCCI</dd>
+            <dt>SAS Label: </dt>
+            <dd>Impression of soft tissue condition</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Clinical impression of soft tissue condition</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">12</td>
+                <td class="values" align="right">12</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">14</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9151</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROCDE">OHAROCDE - Denture/Partial Denture/Plates</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROCDE</dd>
+            <dt>SAS Label: </dt>
+            <dd>Denture/Partial Denture/Plates</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Denture/Partial Denture/Plates</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">96</td>
+                <td class="values" align="right">96</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">98</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9067</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHARNF">OHARNF - No significant findings</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHARNF</dd>
+            <dt>SAS Label: </dt>
+            <dd>No significant findings</dd>
+            <dt>English Text: </dt>
+            <dd class="info">No significant findings</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">6366</td>
+                <td class="values" align="right">6366</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">23</td>
+                <td class="values" align="right">6389</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">2776</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAROTH">OHAROTH - Some other finding (specify w/referral)</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAROTH</dd>
+            <dt>SAS Label: </dt>
+            <dd>Some other finding (specify w/referral)</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Some other finding (specify w/referral letter)</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">13</td>
+                <td class="values" align="right">13</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">2</td>
+                <td class="values" align="right">15</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">9150</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagebreak">
+          <h3 class="vartitle" id="OHAPOS">OHAPOS - Was participant exam position recumbent</h3>
+          <dl>
+            <dt>Variable Name: </dt>
+            <dd class="info">OHAPOS</dd>
+            <dt>SAS Label: </dt>
+            <dd>Was participant exam position recumbent</dd>
+            <dt>English Text: </dt>
+            <dd class="info">Was the SP in a recumbent (laying down) position for all eligible assessments of the oral health exam?</dd>
+            <dt class="info">English Instructions: </dt>
+            <dd class="info">Was the SP in a recumbent (laying down) position for all eligible assessments of the oral health exam (Oral-facial--Loss of Attachment)?</dd>
+            <dt>Target: </dt>
+            <dd> Both males and females 1 YEARS -
+			150 YEARS</dd>
+          </dl>
+          <table class="values">
+            <thead>
+              <tr>
+                <th scope="column" class="values">Code or Value</th>
+                <th scope="column" class="values">Value Description</th>
+                <th scope="column" class="values">Count</th>
+                <th scope="column" class="values">Cumulative</th>
+                <th scope="column" class="values">Skip to Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="values">1</td>
+                <td class="values">Yes</td>
+                <td class="values" align="right">8526</td>
+                <td class="values" align="right">8526</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">2</td>
+                <td class="values">No</td>
+                <td class="values" align="right">332</td>
+                <td class="values" align="right">8858</td>
+                <td class="values">
+                </td>
+              </tr>
+              <tr>
+                <td scope="row" class="values">.</td>
+                <td class="values">Missing</td>
+                <td class="values" align="right">307</td>
+                <td class="values" align="right">9165</td>
+                <td class="values">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
